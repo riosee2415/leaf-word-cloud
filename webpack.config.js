@@ -1,5 +1,6 @@
 "use strict";
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // 시작 포인트 설정
@@ -20,7 +21,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        context: "./public",
+        from: "*.*",
+      },
+    ]),
+  ],
   devServer: {
     contentBase: "./public",
     host: "localhost",
