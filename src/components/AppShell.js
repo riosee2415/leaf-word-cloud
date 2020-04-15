@@ -44,17 +44,17 @@ class AppShell extends React.Component {
           <Drawer open={this.state.toggle}>
             <MenuItem onClick={this._handleDrawerToggle}>
               <Link component={RouterLink} to="/">
-                Home
+                홈 화면
               </Link>
             </MenuItem>
             <MenuItem onClick={this._handleDrawerToggle}>
               <Link component={RouterLink} to="/texts">
-                Texts
+                문서 관리
               </Link>
             </MenuItem>
             <MenuItem onClick={this._handleDrawerToggle}>
               <Link component={RouterLink} to="/words">
-                Words
+                단어 관리
               </Link>
             </MenuItem>
           </Drawer>
